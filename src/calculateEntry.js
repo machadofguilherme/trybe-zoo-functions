@@ -10,8 +10,6 @@ const persons = [
   { name: 'Carlos Nogueira', age: 50 },
 ];
 
-const childAncient = [{ name: 'Lara Carvalho', age: 5 }, { name: 'Carlos Nogueira', age: 50 }];
-
 const chil = persons.filter((element) => element.age <= 17);
 const adu = persons.filter((element) => element.age >= 18 && element.age <= 49);
 const sen = persons.filter((element) => element.age >= 50);
@@ -39,7 +37,5 @@ function calculateEntry(entrants) {
   if (entrants.length === 2) return prices.child + prices.senior;
   return group(entrants);
 }
-
-calculateEntry(persons);
 
 module.exports = { calculateEntry, countEntrants };
