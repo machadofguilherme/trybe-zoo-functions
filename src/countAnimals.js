@@ -30,9 +30,6 @@ const residentsBySpecies = {
     .map((e) => e.residents.length).find((e) => e),
 };
 
-// const penguin = { specie: 'penguins' };
-// const bear = { specie: 'bears', sex: 'female' };
-
 function animalSexCount(animal) {
   const animalName = Object.values(animal).find((e) => e);
   const animalSexGenre = Object.values(animal).at(1);
