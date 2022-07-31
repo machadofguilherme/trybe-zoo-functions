@@ -30,15 +30,15 @@ const residentsBySpecies = {
     .map((e) => e.residents.length).find((e) => e),
 };
 
-function animalSexCount(animal) {
+function animalGenreCount(animal) {
   const animalName = Object.values(animal).find((e) => e);
-  const animalSexGenre = Object.values(animal).at(1);
+  const animalGenre = Object.values(animal).at(1);
 
-  const numberPerSex = species.filter((element) => element.name === animalName)
+  const numberPerGenre = species.filter((element) => element.name === animalName)
     .map((e) => e.residents).filter((e) => e).find((e) => e)
-    .filter((e) => e.sex === animalSexGenre).length;
+    .filter((e) => e.sex === animalGenre).length;
 
-  return numberPerSex;
+  return numberPerGenre;
 }
 
 function uniqueAnimal(animal) {
@@ -51,10 +51,8 @@ function countAnimals(animal) {
   // seu código aqui
   if (animal === undefined) return residentsBySpecies;
   const testOk = Object.keys(animal)
-    .includes('sex') ? animalSexCount(animal) : uniqueAnimal(animal);
+    .includes('sex') ? animalGenreCount(animal) : uniqueAnimal(animal);
   return testOk;
 }
-
-countAnimals();
 
 module.exports = countAnimals;
