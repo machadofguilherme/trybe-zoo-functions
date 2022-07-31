@@ -55,4 +55,6 @@ function countAnimals(animal) {
   return testOk;
 }
 
+countAnimals();
+
 module.exports = countAnimals;
