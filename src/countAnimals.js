@@ -32,6 +32,7 @@ const residentsBySpecies = {
 
 function animalGenreCount(animal) {
   const animalName = Object.values(animal).find((e) => e);
+
   const animalGenre = Object.values(animal).at(1);
 
   const numberPerGenre = species.filter((element) => element.name === animalName)
